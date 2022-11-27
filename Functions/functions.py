@@ -5,16 +5,16 @@ from Variables.variables import *
 ans=0
 calcerror=str()
 class Calculator():
- 
+
     def __init__(self, s):
         self._s = s
         self._i = 0
         self._len = len(s)
         self._err = False
-    
+
     def next(self):
         self._i += 1
-        
+
     def take(self):
         l = self._len
         j = i = self._i
@@ -32,7 +32,7 @@ class Calculator():
         if i == j:
             raise Exception()
         return int(s[i:j])
-        
+
     def poww(self):
         res = self.take()
         l = self._len
@@ -42,7 +42,7 @@ class Calculator():
             num = self.take()
             res = res**num
         return res
-    
+
     def mul_div(self):
         global calcerror
         res = self.poww()
@@ -60,7 +60,7 @@ class Calculator():
                 else:
                   res /= num
         return res
-    
+
     def plus_minus(self):
         res = self.mul_div()
         l = self._len
@@ -74,7 +74,7 @@ class Calculator():
             if op == '-':
                 res -= num
         return res
-    
+
     def calc(self):
         try:
             return self.plus_minus()
@@ -92,7 +92,7 @@ def edit_numbers(num):
   text.insert(tk.END, num)
   first=False
   text.config(state=tk.DISABLED)
-    
+
 
 def add_signe(op):
   global first
@@ -121,7 +121,7 @@ def calculate():
 
   text.config(state=tk.NORMAL)
   text.delete("1.0","end")
-      
+
   if calcerror:
     text.insert("1.0", calcerror)
     first=True
