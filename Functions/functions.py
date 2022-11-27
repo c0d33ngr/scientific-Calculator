@@ -131,3 +131,8 @@ def calculate():
   text.config(state=tk.DISABLED)
   first=True;
   return ans
+
+
+def delete():
+  text.config(state=tk.NORMAL)
+  text.delete("1.0", "end")

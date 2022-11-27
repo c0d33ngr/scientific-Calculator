@@ -50,7 +50,7 @@ button_0.grid(column=0, row=5)
 button_dot = tk.Button(command = lambda: edit_numbers("."), text=".", font=("Times New Roman", 30), width=4)
 button_dot.grid(column=1, row=5)
 
-button_log = tk.Button(command = "", text="log", font=("Times New Roman", 30), width=4)
+button_log = tk.Button(command = lambda: add_signe("log"), text="log", font=("Times New Roman", 30), width=4)
 button_log.grid(column=2, row=5)
 
 button_add = tk.Button(command = lambda: add_signe("+"), text="+", font=("Times New Roman", 30), width=4)
@@ -58,13 +58,13 @@ button_add.grid(column=3, row=5)
 
 
 # Row Five
-button_sine = tk.Button(command="", text="sin", font=("Times New Roman", 30), width=4)
+button_sine = tk.Button(command= lambda: add_signe("sin"), text="sin", font=("Times New Roman", 30), width=4)
 button_sine.grid(column=0, row=6)
 
-button_cosine = tk.Button(command="", text="cos", font=("Times New Roman", 30), width=4)
+button_cosine = tk.Button(command= lambda: add_signe("cos"), text="cos", font=("Times New Roman", 30), width=4)
 button_cosine.grid(column=1, row=6)
 
-button_tangent = tk.Button(command="", text="tan", font=("Times New Roman", 30), width=4)
+button_tangent = tk.Button(command= lambda: add_signe("tan"), text="tan", font=("Times New Roman", 30), width=4)
 button_tangent.grid(column=2, row=6)
 
 button_equal = tk.Button(command= calculate, text="=", font=("Times New Roman", 30), width=4)
@@ -72,14 +72,14 @@ button_equal.grid(column=3, row=6)
 
 
 # Row Five
-button_radian = tk.Button(command = "", text = "rad", font = ("Times New Roman", 30), width = 4)
+button_radian = tk.Button(command = lambda: add_signe("rad"), text = "rad", font = ("Times New Roman", 30), width = 4)
 button_radian.grid(column = 0, row = 7)
 
-button_exponential = tk.Button(command = "", text = "e", font = ("Times New Roman", 30), width = 4)
+button_exponential = tk.Button(command = lambda: add_signe("e"), text = "e", font = ("Times New Roman", 30), width = 4)
 button_exponential.grid(column = 1, row = 7)
 
-button_pi = tk.Button(command = "", text = " π", font = ("Times New Roman", 30), width = 4)
+button_pi = tk.Button(command = lambda: add_signe(" π"), text = " π", font = ("Times New Roman", 30), width = 4)
 button_pi.grid(column = 2, row = 7)
 
-button_delete = tk.Button(command = "", text = "Del", font = ("Times New Roman", 30), width = 4)
+button_delete = tk.Button(command = lambda: delete(), text = "Del", font = ("Times New Roman", 30), width = 4)
 button_delete.grid(column = 3, row = 7)
